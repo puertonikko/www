@@ -19,7 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+        this.bindEvents();		
     },
     // Bind Event Listeners
     //
@@ -34,6 +34,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		app.redirectFunction();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -45,5 +46,9 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+	redirectFunction: function()
+	{
+		window.location.href = "http://www.womansbf.com/m_index.php";
+	}
 };
